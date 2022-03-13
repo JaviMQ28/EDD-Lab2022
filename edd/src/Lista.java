@@ -282,107 +282,26 @@ public class Lista<T> implements Collection<T> {
      */
     public void reverse() {
         // Tu codigo aqui
-      
-	//Iterator iter = iterator();
-	//iter.start();
-	
-	//agregaInicio(cabeza.elemento);
-	//delete(cabeza.elemento);
-
 	Iterador iter = new Iterador();
-	//Iterador iter2 = new Iterador();
 	int comparar = 0;
-	//Nodo auxiliar = cabeza.anterior;
 	
 	if(this.isEmpty()){
 	    this.cabeza = this.ultimo;
 	    this.ultimo = this.cabeza;
 	} else {
-	    //while(comparar == this.longi){
-	    //iter.next();
 	    iter.end();
 	    while(comparar < this.longi && iter.hasPrevious()){
-		//delete(iter.next());		
 		add(iter.previous());
-		//delete(ultimo.elemento);
 		comparar++;
 	    }
 
 	    iter.start();
 	    comparar = 0;
 	    while(comparar < this.longi && iter.hasNext()){
-		//delete(iter.next());		
 		delete(iter.next());
-		//delete(ultimo.elemento);
 		comparar++;
 	    }
-	    //delete(iter.next());
-	    //delete(iter.next());
-	    //agregaInicio(iter.previous());
-	    //iter.start();
-	    //delete(ultimo.elemento);
-	    //iter.start();
-	    
-	    //while(iter.hasNext()){
-		//delete(iter.next());
-	    //	delete(iter.previous());
-	    //}
-	    //}
 	}
-	/*
-	if(this.isEmpty()){
-	    cabeza = ultimo;
-	    ultimo = cabeza;
-	} else {
-	    Nodo i = cabeza.siguiente;
-	    Nodo j = ultimo.anterior;
-  
-	    delete(j.anterior.anterior.anterior.anterior.anterior.anterior.anterior.anterior.elemento);
-	    agregaInicio(i.elemento);
-	    delete(j.anterior.anterior.anterior.anterior.anterior.anterior.anterior.elemento);
-	    agregaInicio(i.siguiente.elemento);
-	    delete(j.anterior.anterior.anterior.anterior.anterior.anterior.elemento);
-	    agregaInicio(i.siguiente.siguiente.elemento);
-	    delete(j.anterior.anterior.anterior.anterior.anterior.elemento);
-	    agregaInicio(i.siguiente.siguiente.siguiente.elemento);
-	    delete(j.anterior.anterior.anterior.anterior.elemento);
-	    agregaInicio(i.siguiente.siguiente.siguiente.siguiente.elemento);
-	    delete(j.anterior.anterior.anterior.elemento);
-	    agregaInicio(i.siguiente.siguiente.siguiente.siguiente.siguiente.elemento);
-	    delete(j.anterior.anterior.elemento);
-	    agregaInicio(i.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.elemento);
-	    delete(j.anterior.elemento);
-	    agregaInicio(i.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.elemento);
-	    delete(j.elemento);
-	    agregaInicio(i.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.elemento);
-	    delete(ultimo.elemento);
-	    agregaInicio(i.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente.elemento);
-	}
-	*/
-	
-	
-	//ultimo = ultimo.anterior;
-	//agregaInicio(ultimo.elemento);
-	//ultimo = ultimo.anterior;
-	//agregaInicio(ultimo.elemento);
-	
-	//while(i < this.longi){
-	    
-	//  if (this.ultimo.anterior != null){
-	//	iter.start();
-	//	this.ultimo = this.ultimo.anterior;
-	//	iter.end();
-	//  }
-	//  i++;
-	//}
-
-	//this.cabeza = this.ultimo;
-	//if (this.ultimo == null){
-	//  this.ultimo = this.cabeza;
-	//} else {
-	//  this.ultimo = this.ultimo.anterior;
-	//}
-        //return ;
     }
 
     /**
@@ -395,13 +314,6 @@ public class Lista<T> implements Collection<T> {
         // Tu codigo aqui
 	Iterador iter = new Iterador();
         String coleccion = "";
-	//int comparar = 0;
-	
-	//if(! iter.hasNext()){
-	//return "";
-	//} else {
-	//  return iter.next() + " -> " + iter.next() + " -> " + iter.next() + " -> " + iter.next() + " -> " + iter.next() + " -> " + iter.next();
-	//}
 
 	if(iter.hasNext()){
 	    for(int comparar = 0; comparar < this.longi-1; comparar++){
@@ -411,24 +323,6 @@ public class Lista<T> implements Collection<T> {
 	} else {
 	    return "";
 	}
-	/*
-	if(this.isEmpty()){
-	    return "";
-	} else {
-	    while(iter.hasNext() && comparar < this.longi-1){
-		elem += iter.next() + " -> ";
-		comparar++;
-	    }
-	    return elem + ultimo.elemento;
-	}
-	*/
-
-	//if(! isEmpty()){
-	//return cabeza.elemento + " -> " + cabeza.siguiente.elemento + " -> " + cabeza.siguiente.siguiente.elemento + " -> " + cabeza.siguiente.siguiente.siguiente.elemento + " -> " + cabeza.siguiente.siguiente.siguiente.siguiente.elemento + " -> " + cabeza.siguiente.siguiente.siguiente.siguiente.siguiente.elemento;
-	//} else {
-	//return "";
-	//}
-    
     }
 
     /**
@@ -437,25 +331,15 @@ public class Lista<T> implements Collection<T> {
      */
     public void append(Lista<T> lista) {
         // Tu codigo aqui
-	//Iterador iter = new Iterador();
 	Nodo auxiliar = lista.cabeza;
 	int tamanio = lista.size();
 	int comparar = 0;
 
 	while(comparar < tamanio){
-	    //add(iter.next());
 	    add(auxiliar.elemento);
-	    //delete(auxiliar.elemento);
 	    auxiliar = auxiliar.siguiente;
-	    //delete(auxiliar.elemento);
-	    //if(auxiliar == lista.ultimo){
-	    //	delete(auxiliar.elemento);
-	    //}
-	    //add(lista.cabeza.elemento);
-	    //auxiliar = lista.cabeza;
 	    comparar++;
 	}
-	//return ;
     }
 
     /**
@@ -475,18 +359,8 @@ public class Lista<T> implements Collection<T> {
 
 	if(elemento == null){
 	    throw new NoSuchElementException ("El elemento no puede ser nulo");
-	    //  break;
 	} else if(this.contains(elemento)){
 	    while(contar < this.longi){
-	    //try{
-	    //if(this.contains(elemento) && elemento == iter.next()){
-		//return i;
-		//} else {
-		//throw new NoSuchElementException("El elemento no esta en la lista");
-		//}
-	    //} catch (NoSuchElementException Error){
-	    //System.out.println("El elemento no esta en la lista");
-	    //}
 		if(elemento == iter.next()){
 		    return contar;
 		}
@@ -494,7 +368,6 @@ public class Lista<T> implements Collection<T> {
 	    }
 	} else if(! this.contains(elemento) && ! this.isEmpty()){
 	    throw new NoSuchElementException ("El elemento no esta en la lista");
-	    //  break;
 	} else {
 	    throw new NoSuchElementException ("La lista esta vacia");
 	}
@@ -523,23 +396,13 @@ public class Lista<T> implements Collection<T> {
 	Iterador iter = new Iterador();
 	Nodo auxiliar = new Nodo(elemento);
 	int j = 0;
-	//int k = i;
 
 	if (i < 0){
 	    agregaInicio(elemento); 
 	} else if(i >= this.longi) {
 	    agregaFinal(elemento);
 	} else {
-	    //iter.next();
 	    agregaInicio(auxiliar.elemento);
-	    //auxiliar.siguiente = cabeza.siguiente;
-	    //System.out.println(cabeza.elemento);
-	    /*	    delete(iter.next());
-	    add(iter.previous());
-	    iter.next();
-	    delete(iter.next());
-	    add(iter.previous());*/
-
 	     while(j < i){
 		delete(iter.next());
 		add(iter.previous());
@@ -556,67 +419,7 @@ public class Lista<T> implements Collection<T> {
 		iter.next();
 		j++;
 	    }
-	    
-	    //while(j < i){
-	    //delete(iter.next());
-	    //	agregaInicio(iter.previous());
-		//j++;
-		//}
-	    /*cabeza.siguiente.siguiente.siguiente = auxiliar.anterior;
-	      auxiliar.siguiente = ultimo.anterior.anterior;*/
-	    //auxiliar.anterior.elemento = cabeza.siguiente.elemento;
-	    //System.out.println(auxiliar.elemento);
-	    //agregaInicio(elemento);
-	    //while(j < i){
-	    
-	    //}
 	}
-	/*if (i < 0){
-	    agregaInicio(elemento); 
-	} else if(i >= this.longi){
-	    agregaFinal(elemento);
-	}
-	else {
-	    
-	    // while(i != 0){
-	    //	iter.next();
-		//iter.next();
-	    	//i--;
-	    //}
-
-	    while(i != 0){
-		add(iter.next());		
-		i--;
-	    }
-
-	    if(i == 0){
-		add(elemento);
-	    }
-
-	    while(j <= k){
-		add(iter.next());
-		j++;
-	    }
-	    
-	    j = 0;
-	    iter.start();
-	    while(j < this.longi-1){
-		delete(iter.next());
-		j++;
-		}
-	    //this.cabeza.elemento = iter.next();
-	    //delete(iter.next());
-	    // agregaInicio(elemento);
-	    //this.cabeza.elemento = elemento;
-
-	    //while(j != i){
-	    //	iter.next();
-	    //	j++;
-	    //}
-	    
-	    //this.cabeza.siguiente.elemento = this.cabeza.elemento;
-	    }*/
-	//return ;
     }
 
     // Tu comentario
@@ -624,20 +427,7 @@ public class Lista<T> implements Collection<T> {
 	Iterador iter = new Iterador();
 	int i = lista.longi;
 	int k = longi;
-	//Nodo auxiliar = lista.cabeza;
 	int j = 0;
-
-	
-	//System.out.println(lista.cabeza.elemento);
-	/*add(iter.next());
-	delete(iter.previous());
-	add(lista.cabeza.elemento);
-	lista.delete(lista.cabeza.elemento);
-	iter.next();
-	add(iter.next());
-	delete(iter.previous());
-	add(lista.cabeza.elemento);
-	lista.delete(lista.cabeza.elemento);*/
 
 	if(lista.size() <= this.size()){
 	    while(j < i){
@@ -646,17 +436,9 @@ public class Lista<T> implements Collection<T> {
 		add(lista.cabeza.elemento);
 		lista.delete(lista.cabeza.elemento);
 		iter.next();
-		//System.out.println(j);
-		//this.insert(k, lista.cabeza.elemento);
-		//k++;
 		j++;
 	    }
-	    
-	    //System.out.println(k);
-	    //System.out.println(i);
 	    j = 1;
-	
-	    //iter.start();
 	    while(j <= k - i){
 		add(iter.next());
 		delete(iter.previous());
@@ -664,72 +446,21 @@ public class Lista<T> implements Collection<T> {
 		j++;
 	    }
 	} else {
-	    //System.out.println(j);
-	    //System.out.println(k);
-	    //System.out.println(i);
 	    while(j < k){
 		add(iter.next());
 		delete(iter.previous());
 		add(lista.cabeza.elemento);
 		lista.delete(lista.cabeza.elemento);
 		iter.next();
-		//System.out.println(j);
-		//this.insert(k, lista.cabeza.elemento);
-		//k++;
 		j++;
 	    }
 
-	    //System.out.println(j);
-	    //System.out.println(k);
-	    //System.out.println(i);
 	    while(j <= i - 1){
 	        add(lista.cabeza.elemento);
 		lista.delete(lista.cabeza.elemento);
-		//iter.next();
 		j++;
 	    }
-	    //add(lista.cabeza.elemento);
-	    //lista.delete(lista.cabeza.elemento);
 	}
-	
-	//delete(iter.next());
-	//delete(iter.next());
-	//Iterador iter2 = new Iterador();
-	//add(iter.next());
-
-	/*add(iter.next());
-	add(lista.cabeza.elemento);
-	add(iter.next());
-	add(lista.cabeza.siguiente.elemento);
-	add(iter.next());
-	add(lista.cabeza.siguiente.siguiente.elemento);
-	add(iter.next());
-	add(lista.cabeza.siguiente.siguiente.siguiente.elemento);
-	add(iter.next());
-	add(lista.cabeza.siguiente.siguiente.siguiente.siguiente.elemento);
-	add(iter.next());
-	//add(lista.cabeza.siguiente.siguiente.siguiente.siguiente.siguiente.elemento);
-	add(iter.next());
-
-	iter.start();
-
-	delete(iter.next());
-	delete(iter.next());
-	delete(iter.next());
-	delete(iter.next());
-	delete(iter.next());
-	delete(iter.next());
-	delete(iter.next());*/
-	
-	//while(j < this.longi){
-	    //lista.add(iter.next());
-	    //add(iter.next());
-	//  iter.start();
-	//  lista.add(iter.next());
-	    //lista.add(iter.next());
-	//  j++;
-	//}
-	//return;
     }
 
     /**
