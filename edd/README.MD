@@ -1,4 +1,4 @@
-Nombres -> Javier Alejandro Mancera Quiroz, No. de cuenta: 319274831
+Nombres -> Javier Alejandro Mancera Quiroz
 
 compilar -> javac -d . src/*.java  
 
