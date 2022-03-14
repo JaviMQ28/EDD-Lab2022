@@ -1,3 +1,8 @@
+/**
+ * Interfaz que extiende de Iterator
+ * @version 1
+ * @author Javier Alejandro Mancera Quiroz
+ */
 package Clases;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
